@@ -357,11 +357,12 @@ $buttoncolor: #026C3D ;
 $menucolor: #171815;
 //стиль текста
 $fontone:  'Montserrat', sans-serif;
-$fonttwo:  'Mulish', sans-serif;;
+$fonttwo:  'Mulish', sans-serif;
 //
  body{
    overflow-x: hidden;
    font-family: $fontone;
+   scroll-behavior: smooth;
  }
  h1,h2,h3,h4,h5{
    font-weight: inherit;
@@ -381,6 +382,13 @@ $fonttwo:  'Mulish', sans-serif;;
  ul,li{
    list-style-type: none;
    letter-spacing: 2px;
+ }
+ input{
+   text-indent: 10px;
+ }
+ p{
+   //margin: 0;
+   //padding: 0;
  }
 .cont{
   box-shadow: 4px 0px 10px rgba(0, 0, 0, 0.25);
@@ -697,6 +705,7 @@ $fonttwo:  'Mulish', sans-serif;;
         transition: 0.5s;
         position: relative;
         z-index: 10;
+        scroll-behavior: smooth;
 
         @media only screen and (max-width: 545px){
             padding: 15px 15px;
@@ -723,6 +732,8 @@ $fonttwo:  'Mulish', sans-serif;;
   background-color: $menucolor;
   color: white;
   display: none;
+  transition: 0.4s;
+  transform: rotateX();
 
 
 
@@ -764,6 +775,7 @@ $fonttwo:  'Mulish', sans-serif;;
   color: white;
 
 
+
 //услуги
     .services{
    width: 100%;
@@ -774,6 +786,7 @@ $fonttwo:  'Mulish', sans-serif;;
    align-items: center;
    flex-direction: column;
    padding-bottom: 104px;
+   scroll-behavior: smooth;
 
 
    .services_title{
@@ -790,8 +803,8 @@ $fonttwo:  'Mulish', sans-serif;;
      @media only screen and (max-width: 578px){
         padding: 35px 55px;
      }
-     @media only screen and (max-width: 578px){
-        padding: 15px 10px;
+     @media only screen and (max-width: 492px){
+        padding: 10px 15px;
      }
 
 
@@ -841,6 +854,7 @@ $fonttwo:  'Mulish', sans-serif;;
    padding-right: 75px;
    padding-bottom: 85px;
    padding-top: 58px;
+   scroll-behavior: smooth;
 
    @media only screen and (max-width: 545px){
      padding-left: 35px;
@@ -851,6 +865,9 @@ $fonttwo:  'Mulish', sans-serif;;
   .about_title{
      font-size: 48px;
      font-weight: 400;
+     @media only screen and (max-width: 545px){
+       font-size: 38px;
+     }
   }
 
   .about_info{
@@ -897,8 +914,212 @@ $fonttwo:  'Mulish', sans-serif;;
   }
 }
 
+   .brands{
+     padding-left: 75px;
+     padding-right: 75px;
+     display: grid;
+     //чтобы лого встало в строку с отступом
+     grid-template-columns: repeat(5,1fr);
+     //центрирование
+     align-items: center;
+     //центрирование в блоке
+     justify-items: center;
+     padding-bottom: 105px;
+     scroll-behavior: smooth;
+
+     flex-wrap: wrap;
+     @media only screen and (max-width: 1032px){
+         grid-template-columns: repeat(3,1fr);
+         grid-template-rows: repeat(2,1fr);
+     }
+     @media only screen and (max-width: 740px){
+         grid-template-columns: repeat(2,1fr);
+         grid-template-rows: repeat(3,1fr);
+     }
+     @media only screen and (max-width: 523px){
+         grid-template-columns: repeat(1,1fr);
+         grid-template-rows: repeat(5,1fr);
+     }
+
+      .brands_img{
+        cursor: pointer;
+        transition: 0.3s;
+        &:hover{
+
+            opacity: .5;
+
+        }
+      }
+
+   }
+
+   .call-me{
+     min-height: 362px;
+     background-color: $majorcolor;
+     padding: 0 75px
+     scroll-behavior: smooth;
+
+     @media only screen and (max-width: 450px){
+        padding: 0 20px;
+     }
+
+     .call-me_title{
+       padding-top: 58px;
+       padding-bottom: 46px;
+       font-size: 48px;
+       text-align: center;
+     }
+     .call-me_data{
+       display: grid;
+       grid-template-columns: repeat(2, 1fr);
+       grid-template-rows: repeat(2, 1fr);
+       column-gap: 69px;
+       row-gap: 37px;
+       flex-wrap: wrap;
+
+       @media only screen and (max-width: 790px){
+           grid-template-columns: repeat(1,1fr);
+           grid-template-rows: repeat(1,1fr);
+           padding-bottom: 109px;
+       }
+
+
+       .call-me_input{
+         height: 60px;
+         background-color: $menucolor;
+         box-shadow: inset -4px -2px 4px rgba(0, 0, 0, 0.25);
+         border-radius: 10px;
+         border: none;
+         outline: none;
+         color: white;
+       }
+       .call-me_btn{
+         color: white;
+         background-color: $buttoncolor;
+         padding: 17px 35px;
+         justify-items: center;
+         width: 50%;
+         border-radius: 10px;
+         font-weight: 400;
+         font-size: 20px;
+         line-height: 25px;
+/* identical to box height */
+
+         letter-spacing: 0.1em;
+         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+         text-align: center;
+
+          &:hover{
+            opacity: .8;
+          }
+       }
+
+     }
+   }
+
+   .map{
+     padding-top: 260px;
+     width: 100%;
+
+     .map_info{
+
+
+     }
+   }
+
+   .footer{
+     padding: 0 75px;
+     padding-top: 45px;
+     padding-bottom: 43px;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     background-color: $majorcolor;
+
+     overflow-x: hidden;
+
+
+     .footer_title{
+       align-items: center;
+       font-size: 48px;
+       margin-bottom: 65px;
+       text-align: center;
+     }
+
+     .footer_info{
+       display: flex;
+       flex-direction: row;
+       justify-content: space-around;
+       align-items: flex-start;
+       width: 560px;
+
+       @media only screen and (max-width: 477px){
+            width: 460px;
+       }
+       @media only screen and (max-width: 477px){
+            flex-direction: column-reverse;
+            align-items: center;
+
+       }
+       .footer_info_contacts{
+         line-height: 25px;
+       }
+       .footer_info_num{
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         margin-bottom: 20px;
+
+       }
+
+       .soc{
+
+         font-size: 36px;
+       }
+
+       .soc:not(:first-child){
+         margin: 10px;
+
+
+       }
+     }
+
+     .footer_end{
+       display: flex;
+       flex-direction: row;
+       align-items: center;
+       justify-content: space-between;
+
+       margin-top: 34px;
+
+          .footer_copy{
+            opacity: 0.3;
+
+          }
+
+     }
+   }
+//кнопка
+   .footer_btn{
+     filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.5));
+     transition: 0.5s;
+     cursor: pointer;
+     position: fixed;
+     right: 75px;
+     bottom: 43px;
+     &:hover{
+       opacity: 0.8;
+     }
+     @media only screen and (max-width: 554px){
+       right: 50px;
+       bottom: 32px;
+     }
+   }
+
 }
 .active_menu{
   right: 0;
   box-shadow: -4px 4px 50px rgba(0, 0, 0, 0.7);
+  transition: 0.4s;
+
 }
