@@ -41,20 +41,21 @@ menu();
 
 //Проверка, есть ли у атрибута href свойство, если нет,то выдает 404 ошибку
 const err = function () {
-   const errId = document.querySelectorAll('#err')[0];
+   //вытаскиваем из html все теги а
+   const errA = document.getElementsByTagName('a');
+   //проходимся циклом по всем тегам а
+   for (let i = 0; i < errA.length; i++) {
+      
+      let thisErrA  = errA[i];
+      errA[i].addEventListener('click', ()=>{
+         if (thisErrA.getAttribute('href') == false) {
+             alert('Error 404');
+         }else{
+            return;
+         }
+      });
 
-   //errId[i].addEventListener('click' , () => {
-
-   //});
-   for (let i = 0; i < errId.length; i++) {
-      //let a = errId[i].getAttribute('class');
-      const a = errId[i];
-      console.log(a);
-
-      }
+   }
 
 }
-
-
-
 err();
