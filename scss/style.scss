@@ -359,10 +359,13 @@ $menucolor: #171815;
 $fontone:  'Montserrat', sans-serif;
 $fonttwo:  'Mulish', sans-serif;
 //
+html{
+  scroll-behavior: smooth;
+}
  body{
    overflow-x: hidden;
    font-family: $fontone;
-   scroll-behavior: smooth;
+
  }
  h1,h2,h3,h4,h5{
    font-weight: inherit;
@@ -385,6 +388,10 @@ $fonttwo:  'Mulish', sans-serif;
  }
  input{
    text-indent: 10px;
+ }
+ textarea{
+    text-indent: 10px;
+
  }
  p{
    //margin: 0;
@@ -437,7 +444,7 @@ $fonttwo:  'Mulish', sans-serif;
 
 //вторая четверть круга
   .circle_two{
-   width: 30%;
+      width: 30%;
       height: 50%;
       border-top-right-radius:0;
       border-top-left-radius:100%;
@@ -497,6 +504,7 @@ $fonttwo:  'Mulish', sans-serif;
 
 
 //главная страница
+
 .main_home{
 
 
@@ -637,6 +645,8 @@ $fonttwo:  'Mulish', sans-serif;
             font-size: 20px;
             font-weight: 100;
             border-radius: 15px;
+            position: relative;
+            z-index: 148;
 
             &:hover{
               opacity: 0.8;
@@ -705,7 +715,7 @@ $fonttwo:  'Mulish', sans-serif;
         transition: 0.5s;
         position: relative;
         z-index: 10;
-        scroll-behavior: smooth;
+
 
         @media only screen and (max-width: 545px){
             padding: 15px 15px;
@@ -724,18 +734,25 @@ $fonttwo:  'Mulish', sans-serif;
 
 .menu{
   position: fixed;
-  z-index: 100;
+  z-index: 1000;
   top: 0;
   width: 321px;
-  right: -321px;
+  right: -100%;
   height: 100vh;
   background-color: $menucolor;
   color: white;
-  display: none;
-  transition: 0.4s;
-  transform: rotateX();
+  opacity: 0;
+  transition: all 0.8s ease 0s;
+  transform: translateX(0);
 
+  @media only screen and (max-width: 912px){
+      width: 450px;
 
+  }
+  @media only screen and (max-width: 414px){
+      width: 100%;
+
+  }
 
 
     .menu_content{
@@ -746,6 +763,10 @@ $fonttwo:  'Mulish', sans-serif;
       flex-direction: column;
       margin-right: 2.5rem;
       //padding-top: 43px;
+
+      .menu_btn_close{
+        cursor: pointer;
+      }
 
       .menu_logo{
 
@@ -765,6 +786,8 @@ $fonttwo:  'Mulish', sans-serif;
 
 
 }
+
+
 //ФОН
 .img_fon{
   background-image: url("../img/fon.png");
@@ -786,7 +809,7 @@ $fonttwo:  'Mulish', sans-serif;
    align-items: center;
    flex-direction: column;
    padding-bottom: 104px;
-   scroll-behavior: smooth;
+
 
 
    .services_title{
@@ -841,11 +864,19 @@ $fonttwo:  'Mulish', sans-serif;
              }
 
            }
+           .services_link_choice_openClose{
+             cursor: pointer;
+             transform: rotate(90deg);
+             &:hover{
+
+             }
+           }
          }
        }
      }
    }
 }
+
 
 //обо мне, магия преображения
 .about{
@@ -854,7 +885,7 @@ $fonttwo:  'Mulish', sans-serif;
    padding-right: 75px;
    padding-bottom: 85px;
    padding-top: 58px;
-   scroll-behavior: smooth;
+
 
    @media only screen and (max-width: 545px){
      padding-left: 35px;
@@ -925,7 +956,7 @@ $fonttwo:  'Mulish', sans-serif;
      //центрирование в блоке
      justify-items: center;
      padding-bottom: 105px;
-     scroll-behavior: smooth;
+
 
      flex-wrap: wrap;
      @media only screen and (max-width: 1032px){
@@ -956,8 +987,8 @@ $fonttwo:  'Mulish', sans-serif;
    .call-me{
      min-height: 362px;
      background-color: $majorcolor;
-     padding: 0 75px
-     scroll-behavior: smooth;
+     padding: 0 75px;
+
 
      @media only screen and (max-width: 450px){
         padding: 0 20px;
@@ -1107,6 +1138,24 @@ $fonttwo:  'Mulish', sans-serif;
      position: fixed;
      right: 75px;
      bottom: 43px;
+     z-index: 151;
+     &:hover{
+       opacity: 0.8;
+     }
+     @media only screen and (max-width: 554px){
+       right: 50px;
+       bottom: 32px;
+     }
+   }
+   .footer_btn_close{
+     display: none;
+     filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.5));
+     transition: 0.5s;
+     cursor: pointer;
+     position: fixed;
+     right: 75px;
+     bottom: 43px;
+     z-index: 151;
      &:hover{
        opacity: 0.8;
      }
@@ -1118,8 +1167,136 @@ $fonttwo:  'Mulish', sans-serif;
 
 }
 .active_menu{
-  right: 0;
+  //right: 0;
   box-shadow: -4px 4px 50px rgba(0, 0, 0, 0.7);
   transition: 0.4s;
+  transform: translateX(-321px);
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  width: 321px;
+  //right: -321px;
+  height: 100vh;
+  background-color: $menucolor;
+  color: white;
 
+
+
+  transform: translateX(0);
+
+
+}
+ //моальное окно для связи
+.modal_window{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: black;
+
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0,0, 0.8);
+  transition: all 0.8s ease 0s;
+
+  .modal_cont{
+    //position: fixed;
+    display: flex;
+    flex-direction: column;
+
+    background-color: $majorcolor;
+    padding: 35px 55px;
+    border-radius: 15px;
+    @media only screen and (max-width: 409px){
+      padding: 15px 25px;
+
+    }
+        .modal_title{
+          text-align: center;
+          font-size: 24px;
+          font-weight: 500;
+          color: white;
+          margin-bottom: 20px;
+        }
+        .modal_input{
+          border: none;
+          border-radius: 10px;
+          outline: none;
+          background-color: $menucolor;
+          box-shadow: inset -4px -2px 4px rgba(0, 0, 0, 0.25);
+          color: white;
+          padding: 15px 0;
+          margin-bottom: 10px;
+        }
+        .modal_txt{
+          resize: none;
+          border-radius: 10px;
+          outline: none;
+          border: none;
+          background-color: $menucolor;
+          box-shadow: inset -4px -2px 4px rgba(0, 0, 0, 0.25);
+          color: white;
+        }
+        .modal_btn{
+          padding: 10px 15px;
+          border-radius: 10px;
+          border: none;
+          cursor: pointer;
+          background-color: $buttoncolor;
+          color: white;
+          margin-top: 15px;
+          width: 50%;
+          text-align: center;
+        }
+
+  }
+}
+
+
+
+
+//Страница с ошибкой
+.error{
+  background-color: $majorcolor;
+  width: 100%;
+  height: 110vh;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-left: 20px;
+  padding-right: 20px;
+  overflow-x: hidden;
+  flex-wrap: wrap;
+  @media only screen and (max-width: 800px){
+
+     overflow-x: hidden;
+  }
+
+  .error_cont{
+    max-width: 700px;
+    flex-wrap: wrap;
+
+  .error_title{
+    font-size: 64px;
+    font-weight: 500;
+    flex-wrap: wrap;
+    @media only screen and (max-width: 800px){
+       font-size: 32px;
+       overflow-x: hidden;
+    }
+  }
+  .error_subtitle{
+    font-size: 36px;
+    flex-wrap: wrap;
+    @media only screen and (max-width: 800px){
+       font-size: 24px;
+       overflow-x: hidden;
+    }
+   }
+  }
 }
