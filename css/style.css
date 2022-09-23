@@ -67,7 +67,7 @@ pre {
 /* Text-level semantics
    ========================================================================== */
 /**
- * Remove the gray background on active links in IE 10.
+ * Remove the gray background on  links in IE 10.
  */
 a {
   background-color: transparent;
@@ -309,7 +309,7 @@ textarea {
   /* 2 */
 }
 
-/* Interactive
+/* Inter
    ========================================================================== */
 /*
  * Add the correct display in Edge, IE 10+, and Firefox.
@@ -538,6 +538,11 @@ textarea {
     margin-left: 0;
   }
 }
+@media only screen and (max-width: 336px) {
+  .cont .main_home .header .header_nav .header_nav_info {
+    display: none;
+  }
+}
 .cont .main_home .header .header_nav .header_nav_info .header_nav_info_street {
   margin-bottom: 5px;
 }
@@ -634,6 +639,9 @@ textarea {
   margin-top: 10px;
   opacity: 0.8;
 }
+.cont .home_txt_and_social .home_txt .home_subtitle .br {
+  display: none;
+}
 @media only screen and (max-width: 545px) {
   .cont .home_txt_and_social .home_txt .home_subtitle {
     margin-bottom: 23px;
@@ -645,6 +653,9 @@ textarea {
     font-size: 12px;
     text-align: center;
     margin-bottom: 43px;
+  }
+  .cont .home_txt_and_social .home_txt .home_subtitle .br {
+    display: block;
   }
 }
 @media only screen and (max-height: 460px) {
@@ -851,13 +862,12 @@ textarea {
 }
 @media only screen and (max-width: 492px) {
   .img_fon .services .services_menu {
-    padding: 10px 15px;
+    padding: 10px 25px;
   }
 }
 .img_fon .services .services_menu .services_item {
   width: 455px;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
+  padding: 0;
 }
 @media only screen and (max-width: 715px) {
   .img_fon .services .services_menu .services_item {
@@ -868,6 +878,17 @@ textarea {
   .img_fon .services .services_menu .services_item {
     width: 250px;
   }
+}
+.img_fon .services .services_menu .services_item .services_link .services_link_decs {
+  font-size: 12px;
+  padding: 0 25px;
+  margin-top: 15px;
+  line-height: 20px;
+  max-height: 0;
+  overflow: hidden;
+  font-weight: 300;
+  -webkit-transition: display 1.4s ease;
+  transition: display 1.4s ease;
 }
 .img_fon .services .services_menu .services_item .services_link .services_link_choice {
   display: -webkit-box;
@@ -883,6 +904,15 @@ textarea {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin-top: 5px;
+  padding: 15px 20px;
+  border-radius: 10px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.img_fon .services .services_menu .services_item .services_link .services_link_choice:hover {
+  background-color: #026C3D;
 }
 .img_fon .services .services_menu .services_item .services_link .services_link_choice .services_link_choice_title {
   cursor: pointer;
@@ -899,8 +929,10 @@ textarea {
 }
 .img_fon .services .services_menu .services_item .services_link .services_link_choice .services_link_choice_openClose {
   cursor: pointer;
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
+}
+.img_fon .services .services_menu .services_item .services_link .services_link_choice .services_link_choice_openClose:target {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 .img_fon .about {
   font-family: "Montserrat", sans-serif;
@@ -922,6 +954,11 @@ textarea {
 @media only screen and (max-width: 545px) {
   .img_fon .about .about_title {
     font-size: 38px;
+  }
+}
+@media only screen and (max-width: 350px) {
+  .img_fon .about .about_title {
+    font-size: 26px;
   }
 }
 .img_fon .about .about_info {
@@ -1306,10 +1343,16 @@ textarea {
 .img_fon .footer_btn:hover {
   opacity: 0.8;
 }
-@media only screen and (max-width: 554px) {
+@media only screen and (max-width: 667px) {
   .img_fon .footer_btn {
     right: 50px;
     bottom: 32px;
+  }
+}
+@media only screen and (max-width: 554px) {
+  .img_fon .footer_btn {
+    right: 35px;
+    bottom: 25px;
   }
 }
 .img_fon .footer_btn_close {
@@ -1352,6 +1395,11 @@ textarea {
           transform: translateX(0);
 }
 
+.active_desc {
+  min-height: 200px;
+  display: block;
+}
+
 .modal_window {
   position: fixed;
   top: 0;
@@ -1359,6 +1407,7 @@ textarea {
   width: 100%;
   height: 100%;
   color: black;
+  z-index: -1;
   opacity: 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1418,6 +1467,11 @@ textarea {
           box-shadow: inset -4px -2px 4px rgba(0, 0, 0, 0.25);
   color: white;
 }
+@media only screen and (max-width: 359px) {
+  .modal_window .modal_cont .modal_txt {
+    width: 15rem;
+  }
+}
 .modal_window .modal_cont .modal_btn {
   padding: 10px 15px;
   border-radius: 10px;
@@ -1428,6 +1482,88 @@ textarea {
   margin-top: 15px;
   width: 50%;
   text-align: center;
+}
+
+.modal_sale {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: black;
+  z-index: -1;
+  opacity: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  -webkit-transition: all 0.8s ease 0s;
+  transition: all 0.8s ease 0s;
+}
+.modal_sale .modal_sale_cont {
+  position: relative;
+  max-width: 300px;
+  height: 300px;
+  background-color: #171815;
+  color: white;
+  border-radius: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 30px 20px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+@media only screen and (max-width: 382px) {
+  .modal_sale .modal_sale_cont {
+    max-width: 200px;
+    height: 250px;
+  }
+}
+.modal_sale .modal_sale_cont .modal_sale_title {
+  text-align: center;
+  font-size: 24px;
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 20px;
+}
+.modal_sale .modal_sale_cont .modal_sale_btn {
+  border: none;
+  outline: none;
+  background-color: #026C3D;
+  border-radius: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+.modal_sale .modal_sale_cont .modal_sale_txt {
+  font-size: 18px;
+  font-family: "Mulish", sans-serif;
+  text-align: center;
+}
+.modal_sale .modal_sale_cont .modal_sale_close {
+  position: absolute;
+  text-align: right;
+  top: -5px;
+  right: -5px;
+  background-color: #026C3D;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 10px;
+  cursor: pointer;
 }
 
 .error {
@@ -1486,4 +1622,8 @@ textarea {
     font-size: 24px;
     overflow-x: hidden;
   }
+}
+
+.services_link.active_desc .services_link_decs {
+  min-height: 200px;
 }

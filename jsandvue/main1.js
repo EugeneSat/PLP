@@ -23,16 +23,7 @@ const menu = function () {
 
         });
      }
-/*
-    if (btn_burger) {
-        btn_burger.addEventListener('click', ()=>{
-            deactiveMenu.style.display = 'block';
-            deactiveMenu.style.right = '0px';
-            deactiveMenu.classList.add('active_menu');
 
-        });
-    }
-    */
     if (closeMenu) {
         closeMenu.addEventListener('click', ()=>{
             deactiveMenu.style.opacity = '0';
@@ -72,19 +63,7 @@ const err = function () {
 err();
 
 
-function services() {
-   const service = document.querySelectorAll('.services_link_choice')[0];
-   const serviceA = document.querySelectorAll('.services_link_choice_openClose')[0];
-
-   for (var i = 0; i < service.length; i++) {
-      let serv = service[i];
-      service[i].addEventListener('click', ()=>{
-         serviceA[i].style.transform = 'rotate(90deg)';
-      });
-   }
-}
-services();
-
+//Модальное окно "связаться с нами"
 function modalWindow() {
     const modalWindowAll = document.querySelector('.modal_window');
     const modalWindowOpen = document.querySelector('.footer_btn');
@@ -106,3 +85,80 @@ function modalWindow() {
 
 }
 modalWindow();
+
+console.log(5);
+const service_desc = function() {
+    const sercLinks =  document.querySelectorAll(".services_link");
+    const sercDescs =  document.querySelectorAll("services_link_decs");
+
+  sercLinks.forEach((sercLink) =>{
+     sercLink.addEventListener('click', ()=>{
+       sercLink.classList.toggle("active_desc");
+     });
+  })
+
+
+
+
+}
+service_desc();
+console.log(10);
+
+
+
+//модал окно "15 проц скидка"
+const modalSale = function() {
+   const saleModal = document.querySelector('.modal_sale');
+   const saleBtn = document.querySelector('.modal_sale_btn');
+   const saleTxt = document.querySelector('.modal_sale_txt');
+   const saleclose = document.querySelector('.modal_sale_close');
+
+   saleModal.style.cssText = `
+   opacity: 1;
+   z-index: 15000;
+   `;
+
+saleBtn.addEventListener('click', forremove);
+  function forremove(){
+    saleBtn.removeEventListener('click', forremove);
+
+     saleBtn.style.opacity = "0.2";
+     saleBtn.style.cursor = "auto";
+
+     var timeleft = 5;
+     var downloadTimer = setInterval(function(){
+     if(timeleft <= 0){
+       clearInterval(downloadTimer);
+       saleTxt.innerHTML = oneEsc;
+     } else {
+       saleTxt.innerHTML = timeleft;
+  }
+    timeleft -= 1;
+}, 1000);
+
+//Создадим рандом функцию
+function random(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+const rand = random(1,2);
+let oneEsc;
+if (rand == 1) {
+  oneEsc = 'Ура! Вы выйграли 15% скидку!';
+}
+if (rand == 2){
+  oneEsc = 'Сегодня фартуна не на твоей стороне! Значит повезет в любви!';
+
+}
+
+};
+saleclose.addEventListener('click', ()=>{
+  saleModal.style.cssText = `
+    opacity: 0;
+    z-index: -1;
+  `;
+});
+
+}
+setTimeout(modalSale, 5000);
+
+//modalSale();

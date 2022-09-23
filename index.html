@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>PLP | Cтудия красоты</title>
-   <!----------        Логотип              ------------>
+  <!----------        Логотип              ------------>
   <link rel="shortcut icon" href="img/PLPlogo.svg" type="image/x-icon">
 
-   <!----------        Стиль файл              ------------>
+  <!----------        Стиль файл              ------------>
   <link rel="stylesheet" href="css/style.css">
 
   <!----------       Иконки             ------------>
@@ -23,258 +24,305 @@
 
 
 </head>
+
 <body>
   <div class="cont">
-      <!----------        Major              ------------>
-  <main class="main_home ">
+    <!----------        Major              ------------>
+    <main class="main_home ">
       <!----------        HEADER              ------------>
-    <header class="header" id="major">
-      <nav class="header_nav">
-        <a class="header_logo" href="#">
-        <img src="img/PLPlogo.svg" alt="Logo">
-      </a>
-        <div class="header_nav_info">
-          <a href="" class="header_nav_info_street">Москва, ул.Столетова 7</a>
-          <a href="" class="header_nav_info_number">+7 999 999 99 99</a>
+      <header class="header" id="major">
+        <nav class="header_nav">
+          <a class="header_logo" href="#">
+            <img src="img/PLPlogo.svg" alt="Logo">
+          </a>
+          <div class="header_nav_info">
+            <a href="" class="header_nav_info_street">Москва, ул.Столетова 7</a>
+            <a href="" class="header_nav_info_number">+7 999 999 99 99</a>
+          </div>
+          <div class="header_menu">
+            <a href="#" class="header_burger">
+              <img src="img/burger.svg" alt="Menu" class=" header_burger_img " id="btn_burger">
+              <img src="img/mobileburger.svg" alt="Menu" class=" header_burgermobile_img " id="btn_burger">
+            </a>
+          </div>
+        </nav>
+
+      </header>
+
+      <div class="circle_one"></div>
+      <div class="circle_two"></div>
+      <img src="img/Vika2.png" alt="Model" class="img_model">
+
+
+      <!----------        TITLE AND SOTIAL             ------------>
+      <div class="home_txt_and_social">
+        <div class="home_txt">
+          <h1 class="home_title">PLP - про эстетику, качество, стиль.</h1>
+          <h2 class="home_subtitle">Салон красоты для тех, кто хочет быть красивым,привлекательным <br class="br">и успешным человеком</h2>
+          <a href="#" class="home_button">Записаться</a>
         </div>
-        <div class="header_menu">
-        <a href="#" class="header_burger">
-        <img src="img/burger.svg" alt="Menu" class=" header_burger_img " id="btn_burger">
-        <img src="img/mobileburger.svg" alt="Menu" class=" header_burgermobile_img " id="btn_burger">
-        </a>
-        </div>
-      </nav>
 
-    </header>
-
-    <div class="circle_one"></div>
-    <div class="circle_two"></div>
-    <img src="img/Vika2.png" alt="Model" class="img_model">
-
-
-        <!----------        TITLE AND SOTIAL             ------------>
-    <div class="home_txt_and_social">
-      <div class="home_txt">
-        <h1 class="home_title">PLP - про эстетику, качество, стиль.</h1>
-        <h2 class="home_subtitle">Салон красоты для тех, кто хочет выглядеть не просто красивой, а вау,ваще топ,вот это секс</h2>
-        <a href="#" class="home_button">Записаться</a>
-      </div>
-
-      <div class="home_social">
-        <a href="" class="home_social_inst" id="err">
-          <i class='bx bxl-instagram' ></i>
+        <div class="home_social">
+          <a href="" class="home_social_inst" id="err">
+            <i class='bx bxl-instagram'></i>
           </a>
           <a href="" class="home_social_vk" id="err">
-          <i class='bx bxl-vk' ></i>
+            <i class='bx bxl-vk'></i>
           </a>
           <a href="" class="home_social_whats" id="err">
-          <i class='bx bxl-whatsapp' ></i>
+            <i class='bx bxl-whatsapp'></i>
           </a>
 
+        </div>
       </div>
-    </div>
 
 
-    <a href="#about" class="home_arrow_down" id="err">
-      <img src="img/Arrow_down.svg" alt=""arrow>
-    </a>
-  </main>
+      <a href="#about" class="home_arrow_down" id="err">
+        <img src="img/Arrow_down.svg" alt="" arrow>
+      </a>
+    </main>
 
 
 
 
-  <!------------      Вспывающее меню   ---------------->
+    <!------------      Вспывающее меню   ---------------->
 
-  <div class="menu">
-    <div class="menu_content">
+    <div class="menu">
+      <div class="menu_content">
 
         <img src="img/close.svg" alt="close" class="menu_btn_close">
 
-      <div class="menu_item">
-        <ul class="menu_link">
-          <li class="menu_click">
-            <a href="#major">Главная</a>
+        <div class="menu_item">
+          <ul class="menu_link">
+            <li class="menu_click">
+              <a href="#major">Главная</a>
+            </li>
+            <li class="menu_click">
+              <a href="#about">О нас</a>
+            </li>
+            <li class="menu_click">
+              <a href="#services">Услуги</a>
+            </li>
+            <li class="menu_click">
+              <a href="#contacts">Контакты</a>
+            </li>
+          </ul>
+        </div>
+
+        <img src="img/PLPlogo.svg" alt="Logo" class="menu_logo">
+
+      </div>
+    </div>
+
+  </div>
+
+
+  <!---------------    контент   -------------------------->
+  <div class="img_fon">
+    <!----     О нас    ---->
+    <main class="about" id="about">
+      <h3 class="about_title">Магия <br> преображения</h3>
+      <div class="about_info">
+        <div class="about_subtitle_and_img">
+          <p class="about_subtitle">Для тех, кто хочет жить по-настоящему.</p>
+          <img src="img/magic_img1.png" alt="magic" class="about_img">
+        </div>
+        <div class="about_desc">Когда вы чувствуете прикосновение рук мастера, знайте — волшебство уже началось.PLP является порталом в другое измерение.Новой точкой отсчета.Мир ждет вас таким, каким вы мечтаете быть.Мы с радостью помогаем
+          осуществлять мечты.Сделайте счастливее себя и приходите к нам, даже просто выпить чашечку кофе. И вы насладитесь главным — атмосферой тепла, внимания и доброты наполняющей пространство салона PLP. <br>P.S. Мы можем и умеем все. </div>
+      </div>
+    </main>
+    <!----     услуги    ---->
+    <main class="services" id="services">
+      <h2 class="services_title">Услуги</h2>
+      <div class="services_menu">
+        <ul class="services_item">
+          <!----- 1 ---->
+          <li class="services_link">
+            <div class="services_link_choice">
+
+              <h3 class="services_link_choice_title">Женский зал</h3>
+              <img src="img/pluspng.png" alt="close" class="services_link_choice_openClose">
+
+            </div>
+            <div class="services_link_decs">
+              Наращивание ресниц 1D (классика) —b 90мин. 3000р.
+                Наращивание ресниц 2D — 90мин. р. 3300р.
+                Наращивание ресниц 3D — 2час 3500р.
+                Голливудский (бархатный) объем — 2 часа 4000р.
+                Снятиме ресниц — 15мин. 500р.
+                Ламинирование ресниц — 3000р.
+                Ботекс ресниц — 3000р.
+                Окрашивание ресниц перманентной тушью — 1500р.
+            </div>
+
           </li>
-          <li class="menu_click">
-            <a href="#about">О нас</a>
+          <!----- 2 ---->
+          <li class="services_link">
+            <div class="services_link_choice">
+              <h3 class="services_link_choice_title">Мужской зал</h3>
+
+              <img src="img/plus.svg" alt="close" class="services_link_choice_openClose">
+
+            </div>
+            <div class="services_link_decs">Ориентировочное время работы мастера от 15 до 90мин.
+
+Умная стрижка — от 2000р.
+Стрижка мужская — от 1500р.
+Стрижка креативная — от 2000р.
+Коррекция усов и бороды — от 500р.
+Бритье головы «опасной бритвой» — от 1500р.
+Стрижка + борода + усы + укладка — от 2500р.</div>
           </li>
-          <li class="menu_click">
-            <a href="#services">Услуги</a>
+          <!----- 3 ---->
+          <li class="services_link">
+            <div class="services_link_choice">
+              <h3 class="services_link_choice_title">Плетение волос</h3>
+              <img src="img/plus.svg" alt="close" class="services_link_choice_openClose">
+            </div>
+            <div class="services_link_decs">Экспресс-плетение (без мытья/сушки) — от 1000р.
+Классическое плетение — от 1500р.
+Сложное плетение — от 2000р.
+Вечерняя (свадебная) прическа — от 3500р.</div>
+
           </li>
-          <li class="menu_click">
-            <a href="#contacts">Контакты</a>
+          <!----- 4 ---->
+          <li class="services_link">
+            <div class="services_link_choice">
+              <h3 class="services_link_choice_title">Косметологические услуги</h3>
+              <a href="#" class="services_link_choice_openClose">
+                <img src="img/plus.svg" alt="close">
+              </a>
+            </div>
+            <div class="services_link_decs">Коррекция бровей — 30мин. от 1000р.
+Окрашивание бровей/ресниц — 30мин. от 1000р.
+Комбинированная чистка лица — 1час от 5000р.
+Чистка зоны декольте — 1час от 2000р.
+Чистка зоны спины — 1час от 3000р.
+УЗ-чистка (очищение, пилинг, массаж, крем) — 1час от 3500р.
+Дарсонваль — 1час от 2000р.
+Прокол ушей — 30мин. от 1500р.</div>
+          </li>
+          <!----- 5 ---->
+          <li class="services_link">
+            <div class="services_link_choice">
+              <h3 class="services_link_choice_title">Макияж</h3>
+              <a href="#" class="services_link_choice_openClose">
+                <img src="img/plus.svg" alt="close">
+              </a>
+            </div>
+            <div class="services_link_decs">Дневной макияж — 30мин. от 2000р.
+Вечерний макияж — 1час от 3000р.
+Свадебный макияж — 2часа от 4500р.
+Свадебный макияж с выездом на дом — 2часа от 7000р.</div>
+          </li>
+          <!----- 6 ---->
+          <li class="services_link">
+            <div class="services_link_choice">
+              <h3 class="services_link_choice_title">Наращивание ресниц</h3>
+              <a href="#" class="services_link_choice_openClose">
+                <img src="img/plus.svg" alt="close">
+              </a>
+            </div>
+            <div class="services_link_decs">Наращивание ресниц 1D (классика) — 90мин. 3000р.
+Наращивание ресниц 2D — 90мин. р. 3300р.
+Наращивание ресниц 3D — 2час 3500р.
+Голливудский (бархатный) объем — 2 часа 4000р.
+Снятиме ресниц — 15мин. 500р.
+Ламинирование ресниц — 3000р.
+Ботекс ресниц — 3000р.
+Окрашивание ресниц перманентной тушью — 1500р.</div>
           </li>
         </ul>
       </div>
-
-      <img src="img/PLPlogo.svg" alt="Logo" class="menu_logo">
-
-    </div>
-  </div>
-
-</div>
-
-
-<!---------------    контент   -------------------------->
-<div class="img_fon">
-  <!----     О нас    ---->
-<main class="about" id="about">
-    <h3 class="about_title">Магия <br> преображения</h3>
-    <div class="about_info">
-      <div class="about_subtitle_and_img">
-        <p class="about_subtitle">Для тех, кто хочет жить по-настоящему.</p>
-        <img src="img/magic_img1.png" alt="magic" class="about_img">
+    </main>
+    <!----     бренды    ---->
+    <main class="brands">
+      <a href="https://www.essie.com/" target="_blank"><img src="img/logo-essie.svg" alt="brand1" class="brands_img" id="err"></a>
+      <a href="https://www.clinique.ru/" target="_blank"><img src="img/logo-clinique.svg" alt="brand2" class="brands_img" id="err"></a>
+      <a href="https://naturasiberica.ru/" target="_blank"><img src="img/logo-natura-siberica.svg" alt="brand3" class="brands_img" id="err"></a>
+      <a href="https://www.amway.com/en_US/artistry" target="_blank"><img src="img/logo-artistry.svg" alt="brand4" class="brands_img" id="err"></a>
+      <a href="https://gehwol.net/" target="_blank"><img src="img/logo-gehwol.svg" alt="brand5" class="brands_img" id="err"></a>
+    </main>
+    <!----     Связь    ---->
+    <main class="call-me" id="call-me">
+      <h3 class="call-me_title">Обратная связь</h3>
+      <div class="call-me_data">
+        <input type="text" name="" value="" class="call-me_input" placeholder="Ваше имя">
+        <input type="text" name="" value="" placeholder="Ваш телефон" class="call-me_input">
+        <input type="text" name="" value="" placeholder="Ваша почта(не обязательно)" class="call-me_input">
+        <a href="#" class="call-me_btn">Отправить</a>
       </div>
-      <div class="about_desc">Когда вы чувствуете прикосновение рук мастера, знайте — волшебство уже началось.PLP является порталом в другое измерение.Новой точкой отсчета.Мир ждет вас таким, каким вы мечтаете быть.Мы с радостью помогаем осуществлять мечты.Сделайте счастливее себя и приходите к нам, даже просто выпить чашечку кофе. И вы насладитесь главным — атмосферой тепла, внимания и доброты наполняющей пространство салона BLAIS.P.S. Мы можем и умеем все. </div>
-    </div>
-</main>
-  <!----     услуги    ---->
-<main class="services" id="services">
-  <h2 class="services_title">Услуги</h2>
-  <div class="services_menu">
-    <ul class="services_item">
-      <!----- 1 ---->
-      <li class="services_link">
-        <div class="services_link_choice">
-          <h3 class="services_link_choice_title">Женский зал</h3>
-            <img src="img/plus.svg" alt="close" class="services_link_choice_openClose">
+    </main>
+    <!----     Карта    ---->
+    <main class="map">
+      <div class="map_info">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1336.7396910933378!2d37.50253678793438!3d55.7042992750233!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54c401640d907%3A0x23eefb62725c55b4!2z0YPQuy4g0KHRgtC-0LvQtdGC0L7QstCwLCA3LCDQnNC-0YHQutCy0LAsIDExOTE5Mg!5e0!3m2!1sru!2sru!4v1661857532068!5m2!1sru!2sru"
+          width="100%" height="460" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </main>
 
-        </div>
-        <div class="services_link_choice_subtitle">
-          <p class="services_desc"></p>
-        </div>
-      </li>
-      <!----- 2 ---->
-      <li class="services_link">
-        <div class="services_link_choice">
-          <h3 class="services_link_choice_title">Мужской зал</h3>
-          <a href="#" class="services_link_choice_openClose">
-            <img src="img/plus.svg" alt="close">
-          </a>
-        </div>
-        <div class="services_link_choice_subtitle">
-          <p class="services_desc"></p>
-        </div>
-      </li>
-      <!----- 3 ---->
-      <li class="services_link">
-        <div class="services_link_choice">
-          <h3 class="services_link_choice_title">Плетение волос</h3>
-          <a href="#" class="services_link_choice_openClose">
-            <img src="img/plus.svg" alt="close">
-          </a>
-        </div>
-        <div class="services_link_choice_subtitle">
-          <p class="services_desc"></p>
-        </div>
-      </li>
-      <!----- 4 ---->
-      <li class="services_link">
-        <div class="services_link_choice">
-          <h3 class="services_link_choice_title">Косметологические услуги</h3>
-          <a href="#" class="services_link_choice_openClose">
-            <img src="img/plus.svg" alt="close">
-          </a>
-        </div>
-        <div class="services_link_choice_subtitle">
-          <p class="services_desc"></p>
-        </div>
-      </li>
-      <!----- 5 ---->
-      <li class="services_link">
-        <div class="services_link_choice">
-          <h3 class="services_link_choice_title">Макияж</h3>
-          <a href="#" class="services_link_choice_openClose">
-            <img src="img/plus.svg" alt="close">
-          </a>
-        </div>
-        <div class="services_link_choice_subtitle">
-          <p class="services_desc"></p>
-        </div>
-      </li>
-      <!----- 6 ---->
-      <li class="services_link">
-        <div class="services_link_choice">
-          <h3 class="services_link_choice_title">Наращивание ресниц</h3>
-          <a href="#" class="services_link_choice_openClose">
-            <img src="img/plus.svg" alt="close">
-          </a>
-        </div>
-        <div class="services_link_choice_subtitle">
-          <p class="services_desc"></p>
-        </div>
-      </li>
-    </ul>
-  </div>
-</main>
- <!----     бренды    ---->
-<main class="brands">
-  <a href="https://www.essie.com/" target="_blank"><img src="img/logo-essie.svg" alt="brand1"  class="brands_img" id="err"></a>
-    <a href="https://www.clinique.ru/" target="_blank"><img src="img/logo-clinique.svg" alt="brand2"  class="brands_img" id="err"></a>
-    <a href="https://naturasiberica.ru/" target="_blank"><img src="img/logo-natura-siberica.svg" alt="brand3"  class="brands_img" id="err"></a>
-    <a href="https://www.amway.com/en_US/artistry" target="_blank"><img src="img/logo-artistry.svg" alt="brand4"  class="brands_img" id="err"></a>
-    <a href="https://gehwol.net/" target="_blank"><img src="img/logo-gehwol.svg" alt="brand5"  class="brands_img" id="err"></a>
-</main>
- <!----     Связь    ---->
- <main class="call-me" id="call-me">
-   <h3 class="call-me_title">Обратная связь</h3>
-   <div class="call-me_data">
-     <input type="text" name="" value="" class="call-me_input" placeholder="Ваше имя">
-     <input type="text" name="" value="" placeholder="Ваш телефон" class="call-me_input">
-     <input type="text" name="" value="" placeholder="Ваша почта" class="call-me_input">
-     <a href="#" class="call-me_btn">Отправить</a>
-   </div>
- </main>
-<!----     Карта    ---->
-<main class="map">
-  <div class="map_info">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1336.7396910933378!2d37.50253678793438!3d55.7042992750233!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54c401640d907%3A0x23eefb62725c55b4!2z0YPQuy4g0KHRgtC-0LvQtdGC0L7QstCwLCA3LCDQnNC-0YHQutCy0LAsIDExOTE5Mg!5e0!3m2!1sru!2sru!4v1661857532068!5m2!1sru!2sru" width="100%" height="460" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-  </div>
-</main>
+    <footer class="footer" id="contacts">
+      <h3 class="footer_title">Контакты</h3>
+      <div class="footer_info">
+        <div class="footer_info_contacts">ИНН 0000000 <br> КПП 0000000 <br> БИК 0000000 </div>
+        <div class="footer_info_num"><a href="">+7 999 999 00 00 </a>
+          <p>г.Москва, ул. Столетова 7</p>
+          <div class="footer_sotial">
+            <a href="" class="footer_social_inst soc" id="err">
+              <i class='bx bxl-instagram'></i>
+            </a>
+            <a href="" class="footer_social_vk soc" id="err">
+              <i class='bx bxl-vk'></i>
+            </a>
+            <a href="" class="footer_social_whats soc" id="err">
+              <i class='bx bxl-whatsapp'></i>
+            </a>
 
-<footer class="footer" id="contacts">
-  <h3 class="footer_title">Контакты</h3>
-  <div class="footer_info">
-    <div class="footer_info_contacts">ИНН 0000000 <br> КПП 0000000 <br> БИК 0000000 </div>
-    <div class="footer_info_num"><a href="">+7 999 999 00 00 </a><p>г.Москва, ул. Столетова 7</p>
-      <div class="footer_sotial">
-        <a href="" class="footer_social_inst soc" id="err">
-          <i class='bx bxl-instagram' ></i>
-          </a>
-          <a href="" class="footer_social_vk soc" id="err">
-          <i class='bx bxl-vk' ></i>
-          </a>
-          <a href="" class="footer_social_whats soc" id="err">
-          <i class='bx bxl-whatsapp' ></i>
-          </a>
+          </div>
+        </div>
 
       </div>
-    </div>
 
-  </div>
-
-  <div class="footer_end">
-    <!-----
+      <div class="footer_end">
+        <!-----
     <img src="img/PLPlogo.svg" alt="logo" class="footer_logo">
     ---->
-    <p class="footer_copy">copyright 2022</p>
+        <p class="footer_copy">copyright 2022</p>
+
+      </div>
+    </footer>
+
+    <img src="img/btn.svg" alt="button" class="footer_btn">
+    <img src="img/btn_close.png" alt="button" class="footer_btn_close">
+
+    <!-----Модальное окно при назатии фиксированной кнопки------->
+    <div class="modal_window">
+      <div class="modal_cont">
+        <h3 class="modal_title">Спросите нас</h3>
+        <input type="text" name="" value="" placeholder="почта" class="modal_input">
+        <textarea name="name" rows="5" cols="30" placeholder="сообщение" class="modal_txt"></textarea>
+        <button type="button" name="button" class="modal_btn">Отправить</button>
+      </div>
+    </div>
+    <!-----Модальное окно при назатии кнопки записаться------->
+    <div class="modal_data modal_window">
+
+
+    </div>
+    <!-----Модальное окно акции------->
+    <div class="modal_sale ">
+      <div class="modal_sale_cont">
+        <div class="modal_sale_close">X</div>
+        <div class="modal_sale_title">Нажми на кнопку и получи 15% скидку</div>
+        <button type="button" name="button" class="modal_sale_btn">Нажать</button>
+        <div class="modal_sale_txt"></div>
+
+      </div>
+    </div>
 
   </div>
-</footer>
-
-<img src="img/btn.svg" alt="button" class="footer_btn">
-<img src="img/btn_close.png" alt="button" class="footer_btn_close">
-
-<div class="modal_window">
-<div class="modal_cont">
-  <h3 class="modal_title">Спросите нас</h3>
-  <input type="text" name="" value="" placeholder="почта" class="modal_input">
-  <textarea name="name" rows="5" cols="30" placeholder="сообщение" class="modal_txt"></textarea>
-  <button type="button" name="button" class="modal_btn">Отправить</button>
-</div>
-</div>
-
-</div>
   <script type="text/javascript" src="jsandvue/main1.js" defer></script>
 </body>
+
 </html>
